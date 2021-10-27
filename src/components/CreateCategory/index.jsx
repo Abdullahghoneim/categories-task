@@ -9,6 +9,7 @@ function CreateCategory({ onSubmitNewCategory }) {
     const ob = {
       name,
       url,
+      id: Date.now(),
     };
     setname("");
     setUrl("");
