@@ -17,22 +17,24 @@ function CategoriesList({ categories }) {
           </div>
         ) : (
           categories.map((category) => (
-            <div>
-              <ul>
-                <li className="p-3 list-item shadow-md mt-3 rounded-sm">
-                  {category.name}
-                </li>
-                {category.children && (
-                  <ul className="pl-5">
-                    {category.children.map((child) => (
-                      <li className="p-3 list-item shadow-md mt-3 rounded-sm">
-                        {child.name}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </ul>
-            </div>
+            <ul key={category.name}>
+              <li className="p-3 cursor-move select-none list-item border-2 mt-3 rounded-sm">
+                <i class="fas fa-bars text-gray-100 pr-3"></i> {category.name}
+              </li>
+              {category.children && (
+                <ul className="pl-5">
+                  {category.children.map((child) => (
+                    <li
+                      key={child.name}
+                      className="p-3  select-none cursor-move list-item border-2 mt-3 rounded-sm"
+                    >
+                      <i class="fas fa-bars text-gray-100 pr-3"></i>{" "}
+                      {child.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </ul>
           ))
         )}
       </div>

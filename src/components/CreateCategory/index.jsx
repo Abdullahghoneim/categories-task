@@ -61,8 +61,11 @@ function CreateCategory({ onSubmitNewCategory }) {
         </div>
       </div>
       <div className="p-5 flex justify-between">
-        <div>
-          <p className="text-sm">Your changes are saved</p>
+        <div className="flex">
+          <div className="bg-custom-green  p-2 flex justify-center items-center text-white w-5 h-5 rounded-full">
+            <i class="fas fa-check text-sm"></i>
+          </div>
+          <p className="text-sm pl-2">Your changes are saved</p>
         </div>
         <div>
           <button
