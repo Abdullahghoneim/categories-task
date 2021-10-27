@@ -3,7 +3,25 @@ import CategoriesList from "../CategoriesList";
 import CreateCategory from "../CreateCategory";
 
 function App() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([
+    {
+      name: "1111",
+    },
+    {
+      name: "2222",
+      children: [
+        {
+          name: "1.111",
+        },
+        {
+          name: "2.111",
+        },
+      ],
+    },
+    {
+      name: "3333",
+    },
+  ]);
 
   const onSubmitNewCategory = (newCategory) => {
     setCategories((cuurent) => [...cuurent, newCategory]);
